@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className='ml-[175px] flex flex-row justify-between items-start relative max-lg:mr-[2rem] max-lg:ml-[15px] max-lg:pt-[70px]'>
-        <div className="py-8 w-full">
+      <main className='ml-[205px] flex flex-row justify-between items-start relative max-lg:mr-[1rem] max-lg:ml-[1rem] max-lg:pt-[70px]'>
+        <div className="py-6 w-full">
 
           {
             siteData.navigation.sort((a, b) => a.sort > b.sort ? 1 : -1).map((navParent, i) => <Fragment key={i}>
@@ -84,11 +84,11 @@ function ContentSection(props: {
       title="Copy link to this section"
       onClick={() => navigator.clipboard.writeText(`${window.location.host}#${props.href}`)}
       className={`group cursor-pointer mb-4 max-lg:mb-2 font-semibold text-[1.3rem] ${props.title && '!text-[1.7rem] !font-bold'}`}
-    ><code className='inline-block mr-1 text-[##202530] '>#</code>{props.title || props.subtitle}
+    ><code className='inline-block mr-1 text-[#202530] '>#</code>{props.title || props.subtitle}
 
       {
         props.method && props.method.toUpperCase() === "POST" &&
-        <code className="mx-2 text-sm text-[##202530] border border-green-600 px-1 rounded">POST</code>
+        <code className="mx-2 text-sm text-green-600 border border-green-600 px-1 rounded">POST</code>
       }
       {
         props.method && props.method.toUpperCase() === "GET" &&

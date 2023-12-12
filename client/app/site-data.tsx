@@ -36,30 +36,6 @@ export const siteData = {
                 main: <>
                     <b>Overview</b>
                     <p>Our API allows your application to connect to internal application functionality.</p>
-                    <p>Our current implementation involves features such as:</p>
-                    <ul>
-                        <li>- Connecting your applicants to your profile.</li>
-                    </ul>
-                    <br />
-                    <b>API Keys</b>
-                    <p>In order to access the API endpoints, you must use an API key. Our API does not support sessions, so this key must be supplied with each request.</p>
-                    <p>Only <b>ADMINS</b> can see the API key of your profile.</p>
-                    <br />
-                    <b>Request & Response Format</b>
-                    <p>All requests are made using <b>GET</b> or <b>POST</b> methods. A <b>POST</b> requires a <b>JSON</b> encoded object.</p>
-                    <p>Date and time arguments will always be handled in <b>UTC</b>.</p>
-                    <br />
-                    <p>Requests must be made to the following URL:</p>
-                    <p>https://api-example.com/api/<b>__VERSION__</b>/office/keys/<b>__API_KEY__</b></p>
-                    <br />
-                    <p>Our API responses contain the following structure:</p>
-                    <ul>
-                        <li>- <b>Status</b> ~ An result condition returned by the API.</li>
-                        <li>- <b>Instance</b> ~ The result value. Usually a defined object, otherwise a string containing detailed information.</li>
-                    </ul>
-                    <br />
-                    <b>API Usage Limitations</b>
-                    <p>Per minute limit: 100 API Requests</p>
                     <br />
                     <b>Feedback</b>
                     <p>We value the feedback of our clients. We want to provide a developer experience that allows for a seamless integration, but we need your help! If you have any questions, comments, or ideas for our API, please contact support.</p>
@@ -91,9 +67,8 @@ export const siteData = {
                                     },
                                     {
                                         item: "LanguageIsoCode",
-                                        default: "NL",
                                         type: "string",
-                                        description: "This is the 2-character ISO-code of a language.<br/>Options: EN, NL, FR"
+                                        description: "This is the 2-character ISO-code of a language. Options: EN, NL, FR"
                                     },
                                 ]}
                                 responses={[

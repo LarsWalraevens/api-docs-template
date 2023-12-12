@@ -16,7 +16,7 @@ export default function Navigation() {
             setIsOpenMobile={setIsOpenMobile}
         />
         <nav
-            className={`h-screen py-4 max-lg:hidden fixed border-r-slate-[600/20] border-r overflow-y-auto ${expanded ? 'min-w-[300px] overflow-y-auto' : 'max-w-[150px] lg:w-[150px]'} duration-300 transition-all shadow-lg float-left`}>
+            className={`h-screen py-4 max-lg:hidden fixed border-r-slate-[600/20] border-r overflow-y-auto ${expanded ? 'min-w-[300px] overflow-y-auto' : 'max-w-[170px] lg:w-[170px]'} duration-300 transition-all shadow-lg float-left`}>
             <h1 className='p-2'>LOGO</h1>
             <hr className="mt-4" />
             <div className="flex flex-col justify-start my-4">
@@ -46,19 +46,19 @@ function NavParent(props: {
     const [expanded, setExpanded] = useState(props.items && !props.collapsable ? true : false);
 
     return <>
-        <div className={`${expanded && props.collapsable ? 'bg-gray-100 py-1 pb-2' : ''} max-lg:px-4 lg:px-2 ease-in-out mb-1 duration-300 w-full`}>
+        <div className={`${expanded && props.collapsable ? 'bg-gray-100 py-1 pb-2' : ''} max-lg:px-4 lg:px-3 ease-in-out mb-1 duration-300 w-full`}>
 
             {
                 props.collapsable === false && props.href ?
                     <Link
                         href={props.href.includes("#") ? props.href : `#${props.href}`}
                         onClick={() => props.setIsOpenMobile(false)}
-                        className={`font-semibold text-[15px] max-lg:text-[1.6rem] flex items-center select-none my-1.5 ${!props.collapsable && 'cursor-pointer hover:opacity-50'}`}
+                        className={`font-semibold text-[13px] max-lg:text-[1.6rem] flex items-center select-none my-1.5 ${!props.collapsable && 'cursor-pointer hover:opacity-50'}`}
                     >
                         {props.title}
                     </Link> :
                     <p
-                        className={`font-semibold text-[15px] max-lg:text-[1.6rem] flex items-center select-none my-1.5 ${!props.collapsable && props.href && 'cursor-pointer hover:opacity-50'}`}
+                        className={`font-semibold text-[13px] max-lg:text-[1.6rem] flex items-center select-none my-1.5 ${!props.collapsable && props.href && 'cursor-pointer hover:opacity-50'}`}
                     >
                         {props.title}
                         <span
@@ -76,7 +76,7 @@ function NavParent(props: {
                             {
                                 (props.items).sort((a: any, b: any) => a.sort > b.sort ? 1 : -1).map((item: NavChild, i: number) => <Link
                                     key={i}
-                                    className="inline-block border-b text-sm max-lg:text-[1.4rem] text-gray-600 last:border-none py-2 max-lg:py-3 max-lg:my-2 border-slate-400/20 hover:opacity-70"
+                                    className="inline-block border-b text-[13px] max-lg:text-[1.4rem] text-gray-600 last:border-none py-2 max-lg:py-3 max-lg:my-2 border-slate-400/20 hover:opacity-70"
                                     onClick={() => props.setIsOpenMobile(false)}
                                     href={item.href.includes("#") ? item.href : `#${item.href}`}
                                 >
