@@ -33,7 +33,7 @@ Live example: https://api-docs-template.vercel.app/
     npm run dev
     ```
 
-4. **Start Documenting:** Open `pages/api-docs.tsx` and start documenting your API.
+4. **Start Documenting:** Open `app/site-data.tsx` and start documenting your API.
 
 ## Customize
 
