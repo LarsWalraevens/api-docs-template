@@ -2,6 +2,7 @@
 
 import ContentBlock from "@/components/ui/content-block";
 import { printCSharp, printJson } from "@/components/utils/methods";
+import { AlertCircle } from "react-feather";
 
 /**
  * ? WHAT IS THIS
@@ -34,6 +35,14 @@ export const siteData = {
             title: "Getting started",
             content: {
                 main: <>
+                    <div className="lg:border-2 border-y-2 py-3 px-2 border-red-600 max-lg:my-3 lg:rounded lg:p-4">
+
+                        <b className="text-red-600 flex items-center mb-2"><AlertCircle className="inline-block mr-2" size={18} /> THIS IS AN API DOCS EXAMPLE SITE</b>
+                        <p className="mb-3">You can use this template and get the code at the following link: <a className="link" href="https://github.com/LarsWalraevens/api-docs-template">https://github.com/LarsWalraevens/api-docs-template</a></p>
+                        <p className="mb-3">Tech stack: NextJS, TailwindCSS, TypeScript</p>
+                        <p className="italic">Happy coding!</p>
+                    </div>
+                    <br />
                     <b>Overview</b>
                     <p>Our API allows your application to connect to internal application functionality.</p>
                     <br />

@@ -99,7 +99,7 @@ function ContentSection(props: {
       data-content-type="main"
       className={`flex flex-row flex-wrap max-lg:flex-column w-full max-lg:mb-5 `}
     >
-      <div className={`w-[50%] lg:max-w-[50%] max-lg:w-full max-lg:mb-2 lg:pr-[50px] max-lg:pr-0 `}>
+      <div className={`w-[50%] lg:max-w-[50%] max-lg:w-full max-lg:mb-2 lg:pr-[35px] max-lg:pr-0 `}>
         {props.mainContent}
       </div>
       <div className="w-[50%] z-10 max-lg:w-full">
