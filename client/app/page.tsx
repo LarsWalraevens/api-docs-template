@@ -20,7 +20,7 @@ export default function Home() {
                     title="Copy link to this section"
                     id={navParent.href}
                     onClick={() => navigator.clipboard.writeText(`${window.location.host}#${navParent.href}`)}
-                    className='group flex cursor-pointer mb-4 !text-[1.7rem] font-bold'
+                    className='group flex cursor-pointer mb-4 !text-[1.5rem] font-bold'
                   ><code className='block mr-1 text-[##202530] '>#</code>{navParent.title}</h2>
 
                   <div>
@@ -83,7 +83,7 @@ function ContentSection(props: {
       id={props.href}
       title="Copy link to this section"
       onClick={() => navigator.clipboard.writeText(`${window.location.host}#${props.href}`)}
-      className={`group cursor-pointer mb-4 max-lg:mb-2 font-semibold text-[1.3rem] ${props.title && '!text-[1.7rem] !font-bold'}`}
+      className={`group cursor-pointer mb-4 max-lg:mb-2 font-semibold text-[1.2rem] ${props.title && '!text-[1.5rem] !font-bold'}`}
     ><code className='inline-block mr-1 text-[#202530] '>#</code>{props.title || props.subtitle}
 
       {
