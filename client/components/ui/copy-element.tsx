@@ -7,7 +7,7 @@ export default function CopyElement({ element }: { element: CopyElementType }) {
     const theId = useId();
 
     return <>
-        <span id={`copy-element-${theId.replaceAll(":", "")}`} className="inline-block px-1 break-all text-[0.9rem] text-gray-700 bg-slate-200 border border-gray-400/50 rounded-sm">
+        <span id={`copy-element-${theId.replaceAll(":", "")}`} className="inline-block py-1 px-2 break-all text-[0.9rem] text-gray-700 italic bg-slate-100 border border-gray-400/50 rounded-md">
             {element}
             <span title='Copy element'>
                 <Copy

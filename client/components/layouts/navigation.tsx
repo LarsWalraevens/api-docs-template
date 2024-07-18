@@ -16,8 +16,9 @@ export default function Navigation() {
             setIsOpenMobile={setIsOpenMobile}
         />
         <nav
-            className={`h-screen py-4 max-lg:hidden fixed border-r-slate-[600/20] border-r overflow-y-auto ${expanded ? 'min-w-[300px] overflow-y-auto' : 'max-w-[170px] lg:w-[170px]'} duration-300 transition-all shadow-lg float-left`}>
-            <h1 className='p-2'>LOGO</h1>
+            className={`h-screen bg-white py-4 max-lg:hidden fixed border-r-slate-[600/20] border-r overflow-y-auto ${expanded ? 'min-w-[300px] overflow-y-auto' : 'max-w-[170px] lg:w-[170px]'} duration-300 transition-all shadow-lg float-left`}
+        >
+            <h1 className='p-2'>YOUR LOGO</h1>
             <hr className="mt-4" />
             <div className="flex flex-col justify-start my-4">
                 {
@@ -102,10 +103,10 @@ function MobileNavigation({ isOpenMobile, setIsOpenMobile }: { isOpenMobile: boo
 
     return <>
         <div className="hidden max-lg:inline-block max-lg:fixed max-lg:w-full bg-white h-[65px] border-b-slate-300 border z-[100] max-lg:py-2">
-            <div className='top-2 left-2 absolute'>
-                <h1 className='p-2'>LOGO</h1>
+            <div className='top-1/2 left-2 transform -translate-y-1/2 absolute'>
+                <h1 className='p-2'>YOUR LOGO</h1>
             </div>
-            <div onClick={() => setIsOpenMobile(!isOpenMobile)} id="hamburger-menu" className='absolute top-5 right-5 z-[10000]'>
+            <div onClick={() => setIsOpenMobile(!isOpenMobile)} id="hamburger-menu" className='absolute transform -translate-y-1/2 top-1/2 right-5 z-[10000]'>
                 {
                     isOpenMobile ? <XCircle size={28} /> : <Menu size={28} />
                 }

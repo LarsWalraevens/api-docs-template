@@ -84,7 +84,7 @@
 }
 
 .request-box {
-  @apply bg-slate-100 rounded border border-gray-200 shadow-sm p-5 border-l-4 border-l-gray-300
+  @apply bg-slate-100 rounded border border-gray-200 shadow-[0_0px_6px_0px_rgba(0,0,0,0.1)] p-5 border-l-4 border-l-gray-500
 }
 .request-box h4 {
   @apply !mb-5

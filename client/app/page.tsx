@@ -107,7 +107,7 @@ function ContentSection(props: {
           props.mainCode && props.mainCode.length > 0 &&
           props.mainCode.map((snippet, y) => <div key={y} className='mb-5 max-lg:mt-4'>
             {
-              snippet.title && <h4 className='text-gray-200 inline-block p-1 px-3  rounded-t-[5px] relative lg:border-t lg:border-x border-black lg:bg-[#2b2b2b] lg:mb-[-2px] z-[100] max-lg:text-gray-600 mx-4 max-lg:mb-2 font-secondary lg:text-[0.9rem]'>{snippet.title}</h4>
+              snippet.title && <h4 className='text-gray-200 inline-block p-1 px-3 rounded-t-[5px] relative lg:border-t lg:border-x border-black lg:bg-[#2b2b2b] lg:mb-[-2px] z-[100] max-lg:text-gray-600 lg:mx-4 max-lg:mb-2 font-secondary lg:text-[0.9rem]'>{snippet.title}</h4>
             }
             <div className='p-0 text-gray-300 max-lg:w-full bg-[#2b2b2b] border-black/40 border-y overflow-x-auto relative z-[10]'>
               <div className="absolute top-3 right-4">

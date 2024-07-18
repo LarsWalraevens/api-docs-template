@@ -35,12 +35,11 @@ export const siteData = {
             title: "Getting started",
             content: {
                 main: <>
-                    <div className="lg:border-2 border-y-2 py-3 px-2 border-red-600 max-lg:my-3 lg:rounded lg:p-4">
-
-                        <b className="text-red-600 flex items-center mb-2"><AlertCircle className="inline-block mr-2" size={18} /> THIS IS AN API DOCS EXAMPLE SITE</b>
-                        <p className="mb-3">You can use this template and get the code at the following link: <a className="link" href="https://github.com/LarsWalraevens/api-docs-template">https://github.com/LarsWalraevens/api-docs-template</a></p>
-                        <p className="mb-3">Tech stack: NextJS, TailwindCSS, TypeScript</p>
-                        <p className="italic">Happy coding!</p>
+                    <div className="lg:border-2 border-y-2 border-red-700 bg-red-600 shadow-md max-lg:my-3 rounded p-4">
+                        <b className="text-white flex items-center mb-2"><AlertCircle className="inline-block mr-2" size={18} /> THIS IS AN API DOCS EXAMPLE SITE</b>
+                        <p className="text-white/80 mb-3">You can use this template and get the code at the following link: <a className="link font-bold !text-white" href="https://github.com/LarsWalraevens/api-docs-template">https://github.com/LarsWalraevens/api-docs-template</a></p>
+                        <p className="text-white/80 mb-3">Tech stack: <em>NextJS, TailwindCSS, TypeScript</em></p>
+                        <p className="text-white/80 italic font-semibold" style={{ fontSize: "1.1rem" }}>~ Happy coding!</p>
                     </div>
                     <br />
                     <b>Overview</b>
