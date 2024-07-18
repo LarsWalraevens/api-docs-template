@@ -3,30 +3,61 @@
 import ContentBlock from "@/components/ui/content-block";
 import { printCSharp, printJson } from "@/components/utils/methods";
 import { AlertCircle } from "react-feather";
+import { CodeSnippet } from "./page";
 
 /**
  * ? WHAT IS THIS
- * This object below has an object with a navigation property where we put our site navigation in there AND it's content
+ * This (type-safe) object below has an object with a navigation property where we put our site navigation in there AND it's content
  * It means that if you want to add or edit content, you'll have to change it in "siteData" json variable
+ * 
  * ? HOW TO ADD CONTENT
- * Add content by filling in the json format below, ill explain the properties and what they do:
- * {
- *  sort: sorted in site navigation by number
- *  href?: nav parent can have a href tag that allows the user to easily navigate to that section
- *  title: navigation & content title of this content section
- *  children: if nav parent has sub navigations then you'll use this
- *          {
- *              ...props of content property,
- *              method: 'post' / 'get' - to have this visually labeled as these types of requests
- *          }          
- *  content: actual content of page
- *         {
- *              main: Content in HTML that explains the code
- *              mainCode: Array of content in HTML that is the example code (USE METHODS LIKE printHTML, printJSON and printCSharp)
- *          }
- * }
+ * Add content by filling in the json format below (variable: siteData), check type-interface for details information about what the properties do
  */
-export const siteData = {
+
+
+/**
+ * Interface for a site data item.
+ * This is used to represent a section of the site, with its navigation and content.
+ */
+export interface SiteDataItem {
+    // Sort order in site navigation and page.
+    sort: number;
+    // Whether the item can be collapsed in the navigation.
+    collapsable?: boolean;
+    // URL for the item in the navigation. Allows the user to easily navigate to this section.
+    href?: string;
+    // Title of the item in the navigation and content.
+    title: string;
+    // Child items of the navigation item. If present, the parent item will have sub-navigation.
+    children?: {
+        // Sort order in site navigation and page. Higher numbers are sorted higher.
+        sort: number;
+        // URL for the child item in the navigation. Allows the user to easily navigate to this section.
+        href: string;
+        // Title of the child item in the navigation and content.
+        title: string;
+        // HTTP method of the child item. Will be visually labeled in the navigation.
+        method?: "post" | "get";
+        // Content of the child item.
+        content: {
+            // Main content of the child item. Explains the code.
+            main: JSX.Element;
+            // Array of content in HTML that is the example code. Use methods like printHTML, printJSON and printCSharp.
+            mainCode?: CodeSnippet[];
+        };
+    }[];
+    // Content of the item. If present, it will be displayed in the page.
+    content?: {
+        // Main content of the item. Explains the code.
+        main: React.ReactElement;
+        // Array of content in HTML that is the example code. Use methods like printHTML, printJSON and printCSharp.
+        mainCode?: CodeSnippet[];
+    };
+}
+
+export const siteData: {
+    navigation: SiteDataItem[];
+} = {
     navigation: [
         {
             sort: 1,
@@ -60,7 +91,7 @@ export const siteData = {
                     sort: 1,
                     href: "applicant-update",
                     title: "Connect applicant email",
-                    method: "Post",
+                    method: "post",
                     content: {
                         main: <>
                             <ContentBlock
@@ -121,4 +152,4 @@ export const siteData = {
             ]
         },
     ]
-} 
+}

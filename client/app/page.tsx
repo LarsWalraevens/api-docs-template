@@ -43,9 +43,8 @@ export default function Home() {
                       navParent.content &&
                       <ContentSection
                         title={navParent.title}
-                        href={navParent.href}
+                        href={navParent.href || ''}
                         mainContent={navParent.content.main}
-                        // @ts-ignore
                         mainCode={navParent.content.mainCode}
                         method={null}
                       />
@@ -64,7 +63,7 @@ export default function Home() {
   )
 }
 
-type CodeSnippet = {
+export type CodeSnippet = {
   title?: string,
   content: string | JSX.Element | undefined
 }
